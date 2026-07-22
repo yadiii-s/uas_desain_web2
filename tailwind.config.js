@@ -4,7 +4,6 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Ganti nilai di sini kalau mau aksen navy — struktur komponen tidak berubah.
         primary: {
           50: '#f0fdf4',
           100: '#dcfce7',

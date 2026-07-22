@@ -8,7 +8,6 @@ const props = defineProps({
 })
 const emit = defineEmits(['update:modelValue'])
 
-// Di mobile daftar kategori bisa dilipat agar tidak memakan layar.
 const terbuka = ref(false)
 
 function pilih(kategori) {
@@ -19,7 +18,6 @@ function pilih(kategori) {
 
 <template>
   <aside class="w-full lg:w-60 lg:shrink-0">
-    <!-- Tombol collapse: hanya tampil di mobile -->
     <button
       type="button"
       class="flex w-full items-center justify-between rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm font-semibold text-gray-700 lg:hidden"

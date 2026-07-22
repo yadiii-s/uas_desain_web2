@@ -1,6 +1,5 @@
 import axios from 'axios'
 
-// Base URL MockAPI — ganti kalau resource dipindah ke akun mockapi lain.
 const BASE_URL = 'https://6a607129b1933e9d25fd417b.mockapi.io/api/v1'
 
 const api = axios.create({
@@ -8,7 +7,6 @@ const api = axios.create({
   headers: { 'Content-Type': 'application/json' },
 })
 
-/* ============================ Produk ============================ */
 
 export async function getProduk() {
   const { data } = await api.get('/Produk')
@@ -35,11 +33,9 @@ export async function deleteProduk(id) {
   return data
 }
 
-/* ========================= DetailPesanan ========================= */
 
 export async function getDetailPesanan() {
   const { data } = await api.get('/DetailPesanan')
-  // MockAPI membalas 404 kalau resource kosong pada sebagian akun — sudah ditangani di catch pemanggil.
   return Array.isArray(data) ? data : []
 }
 
@@ -63,9 +59,6 @@ export async function deleteDetailPesanan(id) {
   return data
 }
 
-/* ========================= Helper kecil ========================= */
-
-/** MockAPI menyimpan harga sebagai string, jadi selalu dinormalkan dulu sebelum dihitung. */
 export function toNumber(nilai) {
   const angka = Number(String(nilai ?? '').replace(/[^\d.-]/g, ''))
   return Number.isFinite(angka) ? angka : 0
@@ -75,10 +68,6 @@ export function formatRupiah(nilai) {
   return 'Rp ' + toNumber(nilai).toLocaleString('id-ID')
 }
 
-/**
- * Ubah baris-baris DetailPesanan yang flat menjadi daftar pesanan,
- * satu objek per idPesanan, urut dari yang terbaru.
- */
 export function kelompokkanPesanan(detailList) {
   const peta = new Map()
 

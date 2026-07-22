@@ -17,7 +17,6 @@ const navigasi = [
 <template>
   <header class="sticky top-0 z-40 bg-white shadow-sm">
     <nav class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
-      <!-- Logo -->
       <RouterLink to="/" class="flex items-center gap-2" @click="menuTerbuka = false">
         <span
           class="flex h-9 w-9 items-center justify-center rounded-full bg-primary-600 text-white"
@@ -27,7 +26,6 @@ const navigasi = [
         <span class="text-base font-bold text-gray-800 sm:text-lg">Kenangan Senja</span>
       </RouterLink>
 
-      <!-- Menu desktop -->
       <div class="hidden items-center gap-1 md:flex">
         <RouterLink
           v-for="item in navigasi"
@@ -41,7 +39,6 @@ const navigasi = [
       </div>
 
       <div class="flex items-center gap-2">
-        <!-- Ikon keranjang + badge -->
         <RouterLink
           to="/keranjang"
           class="relative rounded-lg p-2 text-gray-600 transition hover:bg-primary-50 hover:text-primary-700"
@@ -57,7 +54,6 @@ const navigasi = [
           </span>
         </RouterLink>
 
-        <!-- Hamburger mobile -->
         <button
           type="button"
           class="rounded-lg p-2 text-gray-600 transition hover:bg-gray-100 md:hidden"
@@ -70,7 +66,6 @@ const navigasi = [
       </div>
     </nav>
 
-    <!-- Dropdown mobile -->
     <div v-if="menuTerbuka" class="border-t border-gray-100 bg-white md:hidden">
       <div class="space-y-1 px-4 py-3">
         <RouterLink
