@@ -40,13 +40,13 @@ const tahun = new Date().getFullYear()
           <ul class="mt-3 space-y-2 text-sm text-gray-500">
             <li>Senin – Jumat: 08.00 – 22.00</li>
             <li>Sabtu – Minggu: 09.00 – 23.00</li>
-            <li>Jl. Melati No. 12, Makassar</li>
+            <li>Jl. Pesantren No. 12, Cimahi</li>
           </ul>
         </div>
       </div>
 
       <p class="mt-8 border-t border-gray-200 pt-5 text-center text-xs text-gray-400">
-        © {{ tahun }} Kenangan Senja. Dibuat untuk praktikum Vue 3.
+        © {{ tahun }} Kenangan Senja.
       </p>
     </div>
   </footer>

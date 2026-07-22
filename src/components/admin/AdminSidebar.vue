@@ -30,7 +30,7 @@ const menu = [
       <span class="flex h-8 w-8 items-center justify-center rounded-full bg-primary-600 text-white">
         <Coffee class="h-4 w-4" />
       </span>
-      <span class="font-bold text-white">Admin Panel</span>
+      <span class="font-bold text-white">Kenangan Senja</span>
     </div>
 
     <nav class="space-y-1 p-4">
