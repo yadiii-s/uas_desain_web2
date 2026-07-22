@@ -13,7 +13,6 @@ import PesananView from '../views/admin/PesananView.vue'
 import PesananDetailView from '../views/admin/PesananDetailView.vue'
 
 const routes = [
-  // Area customer
   {
     path: '/',
     component: UserLayout,
@@ -25,7 +24,6 @@ const routes = [
     ],
   },
 
-  // Area admin — dipisah lewat route saja, tanpa login
   {
     path: '/admin',
     component: AdminLayout,

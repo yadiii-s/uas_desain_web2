@@ -3,7 +3,6 @@ import { toNumber } from '../services/api.js'
 
 const STORAGE_KEY = 'reservasi-cafe-cart'
 
-/** State module-level: satu keranjang dipakai bersama semua komponen. */
 const items = reactive(muatDariStorage())
 
 function muatDariStorage() {
@@ -20,8 +19,7 @@ function simpanKeStorage() {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(items))
   } catch {
-    // localStorage penuh / diblokir — keranjang tetap jalan di memori.
-  }
+    }
 }
 
 export function useCart() {

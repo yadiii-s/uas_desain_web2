@@ -15,7 +15,6 @@ const menu = [
 </script>
 
 <template>
-  <!-- Overlay gelap saat sidebar off-canvas terbuka di mobile -->
   <div
     v-if="props.terbuka"
     class="fixed inset-0 z-30 bg-black/40 lg:hidden"
